@@ -1,0 +1,39 @@
+create_outline:
+  description: >
+    Based on the research questions generated for {company_name}, create a comprehensive 
+    report outline that will guide the financial analysis. 
+    
+    The outline should:
+    1. Group related questions into logical report sections
+    2. Order sections in a way that builds a coherent analytical narrative
+    3. For each section, specify:
+       - A clear, descriptive title
+       - A brief description of what the section will cover
+       - Which tools are needed (financial_rag, ratio_calculator, web_search, visualization)
+       - The sequential order of the section in the report
+    
+    Typical report structure might include:
+    - Executive Summary (web_search)
+    - Company and Industry Overview (financial_rag, web_search)
+    - Financial Performance Analysis (financial_rag, ratio_calculator, visualization)
+    - Valuation Analysis (ratio_calculator, visualization)
+    - Growth Analysis (financial_rag, ratio_calculator, visualization)
+    - Risk Assessment (financial_rag, web_search)
+    - Competitive Positioning (web_search, financial_rag)
+    - Investment Recommendation (all tools)
+    
+    Research Questions to Organize:
+    {research_questions}
+    
+    Investment Strategy Context:
+    {investment_persona}
+    
+    Ensure the outline aligns with the {investment_strategy} investment strategy and 
+    addresses all the research questions comprehensively.
+  expected_output: >
+    A structured report outline with sections ordered sequentially. Each section should include:
+    - title: Clear section heading
+    - description: What the section will analyze
+    - required_tools: List of tools needed (financial_rag, ratio_calculator, web_search, visualization)
+    - order: Sequential position in the report (1, 2, 3, etc.)
+  agent: research_planner

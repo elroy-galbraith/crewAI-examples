@@ -1,0 +1,51 @@
+simulate_conversation:
+  description: >
+    Simulate a detailed conversation between a portfolio manager and a financial analyst 
+    about {company_name}. The portfolio manager should ask probing questions based on the 
+    {investment_strategy} investment strategy, and the analyst should respond with preliminary 
+    insights and suggestions for further research.
+    
+    The conversation should cover:
+    - Industry and competitive positioning
+    - Financial health and key metrics
+    - Growth prospects and sustainability
+    - Valuation considerations
+    - Risk factors
+    - Any strategy-specific criteria (e.g., dividend yield for income strategies, 
+      P/E ratios for value strategies, revenue growth for growth strategies)
+    
+    The conversation should be thorough and generate at least 8-12 substantive questions 
+    that will guide the research process.
+    
+    Investment Strategy Context:
+    {investment_persona}
+  expected_output: >
+    A detailed conversation transcript showing the back-and-forth between the portfolio 
+    manager and analyst, with clear questions and preliminary insights that will inform 
+    the research process.
+  agent: portfolio_manager
+
+extract_questions:
+  description: >
+    Based on the conversation between the portfolio manager and analyst about {company_name}, 
+    extract and organize all key research questions. Each question should be:
+    - Specific and actionable
+    - Categorized appropriately (e.g., Industry Analysis, Financial Ratios, Growth Metrics, 
+      Valuation, Risk Assessment, etc.)
+    - Prioritized (high, medium, or low) based on its importance to the {investment_strategy} strategy
+    
+    Ensure the questions cover:
+    1. Industry and market context
+    2. Company-specific financial metrics
+    3. Competitive advantages and positioning
+    4. Growth drivers and sustainability
+    5. Valuation metrics relevant to the strategy
+    6. Risk factors and concerns
+    
+    Return a structured list of research questions that will guide the financial analysis.
+  expected_output: >
+    A structured list of research questions, each with:
+    - The question text
+    - Category (Industry Analysis, Financial Ratios, Growth Metrics, Valuation, Risk Assessment, etc.)
+    - Priority level (high, medium, low)
+  agent: analyst

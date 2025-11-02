@@ -1,0 +1,39 @@
+name: "Dividend/Income Investing Strategy"
+strategy_type: "Dividend"
+key_metrics:
+  - "Dividend Yield"
+  - "Dividend Payout Ratio"
+  - "Dividend Growth Rate"
+  - "Free Cash Flow"
+  - "Debt-to-Equity"
+  - "Current Ratio"
+  - "Years of Dividend Growth"
+
+criteria:
+  min_dividend_yield: 3.0
+  max_payout_ratio: 70
+  min_dividend_growth_5yr: 5
+  min_free_cash_flow_margin: 12
+  max_debt_to_equity: 1.0
+  min_current_ratio: 1.2
+  min_consecutive_dividend_years: 10
+
+risk_tolerance: "low"
+time_horizon: "long-term"
+
+description: |
+  Income-focused strategy targeting companies with strong, sustainable dividends.
+  Emphasizes:
+  - High current dividend yield
+  - Long track record of dividend payments
+  - Consistent dividend growth
+  - Strong cash flow generation
+  - Conservative payout ratios (room to grow)
+  - Financial stability and low debt
+
+investment_philosophy: |
+  We seek companies with proven ability to generate consistent cash flow and
+  return capital to shareholders through dividends. We prioritize dividend safety,
+  growth potential, and sustainability over high yields alone. Our ideal companies
+  have moats that protect their cash flows and allow for steady dividend increases
+  over time.

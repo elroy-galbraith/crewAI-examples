@@ -1,0 +1,48 @@
+write_section:
+  description: >
+    Write the "{section_title}" section of the financial analysis report for {company_name}.
+    
+    Section Description:
+    {section_description}
+    
+    Research Data and Analysis:
+    {research_data}
+    
+    Your section should:
+    1. Start with a brief overview of what this section covers
+    2. Present the key findings from the research and analysis
+    3. Incorporate relevant financial metrics, ratios, and calculations
+    4. Reference any visualizations created (charts, graphs)
+    5. Provide interpretation and insights
+    6. Discuss implications for the investment decision
+    7. Highlight how the findings relate to the {investment_strategy} strategy criteria
+    
+    The section should be written in markdown format and be approximately 800-1200 words.
+    Use proper headings, bullet points, and formatting to make it readable.
+    
+    If the research included visualizations, reference them with markdown syntax:
+    ![Chart Description](path/to/chart.png)
+    
+    Investment Strategy Context:
+    {investment_persona}
+    
+    Full Report Outline (for context on how this section fits):
+    {report_outline}
+    
+    Ensure your writing:
+    - Is professional and analytical in tone
+    - Uses specific data and metrics from the research
+    - Provides clear interpretations and insights
+    - Relates findings back to investment criteria
+    - Maintains objectivity while being insightful
+    
+    CRITICAL: You must return a valid CompletedSection object with these exact fields:
+    - title (string): The section title
+    - content (string): The complete markdown-formatted section content (800-1200 words)
+    - order (int): The section order number
+  expected_output: >
+    A CompletedSection Pydantic model containing:
+    - title: "{section_title}"
+    - content: The complete written section in markdown format (800-1200 words)
+    - order: {section_order}
+  agent: report_writer

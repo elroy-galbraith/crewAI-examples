@@ -1,0 +1,93 @@
+name: "JSE Dividend Income Strategy"
+strategy_type: "Dividend"
+key_metrics:
+  - "Dividend Yield (JMD)"
+  - "Dividend Payout Ratio"
+  - "Dividend Growth Rate (5-year)"
+  - "Free Cash Flow (JMD)"
+  - "ROE"
+  - "Debt-to-Equity"
+  - "Trading Volume/Liquidity"
+  - "JMD/USD Exchange Rate Impact"
+
+criteria:
+  min_dividend_yield: 4.0  # JSE companies often have higher yields
+  max_payout_ratio: 70
+  min_dividend_growth_5yr: 5
+  min_roe: 12  # Adjusted for JSE market
+  max_debt_to_equity: 1.2
+  min_avg_daily_volume: 50000  # Liquidity important in smaller market
+  min_consecutive_dividend_years: 5
+
+risk_tolerance: "low-to-medium"
+time_horizon: "long-term"
+
+description: |
+  Dividend income strategy adapted for Jamaican Stock Exchange (JSE) companies.
+  
+  Key considerations for JSE:
+  - Higher dividend yields are common (4-8%+) due to market structure
+  - Strong dividend culture in Jamaica - many companies pay regular dividends
+  - Smaller market capitalization requires attention to liquidity
+  - Currency risk from JMD/USD fluctuations
+  - Family-owned businesses common - different governance
+  - Regional Caribbean expansion opportunities
+  - Less analyst coverage - rely more on company filings
+  
+  Emphasizes:
+  - Sustainable high dividend yields (4%+ target)
+  - Consistent dividend payment history
+  - Strong local market position
+  - Adequate trading volume/liquidity
+  - Conservative debt levels
+  - Stable cash flow generation
+
+investment_philosophy: |
+  We seek established JSE companies with proven dividend track records and 
+  strong competitive positions in the Jamaican market. We prioritize dividend 
+  sustainability over maximum yield, recognizing that JSE dividend yields are 
+  typically higher than US markets due to market structure and investor preferences.
+  
+  Given the smaller size of the JSE, we pay special attention to:
+  - Trading liquidity (can we enter/exit positions efficiently?)
+  - Currency risk (impact of JMD/USD on returns)
+  - Regional growth (Caribbean expansion potential)
+  - Local economic conditions (Jamaica-specific factors)
+  - Governance (particularly for family-owned businesses)
+  
+  We prefer companies with:
+  - Clear dividend policies
+  - Strong cash flow generation
+  - Conservative balance sheets
+  - Market-leading positions in Jamaica
+  - Track record of weathering economic cycles
+
+jse_specific_considerations:
+  market_characteristics:
+    - "Smaller market cap vs major exchanges"
+    - "Lower trading volumes - liquidity matters"
+    - "Strong dividend culture - high yields common"
+    - "Family-owned businesses prevalent"
+    - "Caribbean regional players"
+  
+  currency_risk:
+    - "JMD volatility vs USD/CAD"
+    - "Impact on international investors"
+    - "Currency hedging considerations"
+  
+  sectors_of_interest:
+    - "Financial Services (NCB, Sagicor, JMMB)"
+    - "Conglomerates (GraceKennedy, VM Group)"
+    - "Manufacturing (Jamaica Broilers, Carreras)"
+    - "Distribution (Hardware & Lumber, PanJam)"
+  
+  typical_yields:
+    excellent: "> 6% dividend yield"
+    good: "4-6% dividend yield"  
+    acceptable: "3-4% dividend yield"
+    low: "< 3% dividend yield"
+  
+  liquidity_guidelines:
+    highly_liquid: "> 200,000 shares daily average"
+    adequate: "50,000-200,000 shares daily"
+    concern: "< 50,000 shares daily"

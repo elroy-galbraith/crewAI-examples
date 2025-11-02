@@ -1,0 +1,36 @@
+name: "Value Investing Strategy"
+strategy_type: "Value"
+key_metrics:
+  - "P/E Ratio"
+  - "P/B Ratio"
+  - "Dividend Yield"
+  - "ROE"
+  - "Debt-to-Equity"
+  - "Free Cash Flow"
+  - "Current Ratio"
+
+criteria:
+  max_pe: 15
+  max_pb: 1.5
+  min_dividend_yield: 2.0
+  min_roe: 15
+  max_debt_to_equity: 0.5
+  min_free_cash_flow_margin: 10
+  min_current_ratio: 1.5
+
+risk_tolerance: "low"
+time_horizon: "long-term"
+
+description: |
+  Classic value investing approach focused on identifying undervalued companies
+  with strong fundamentals. Emphasizes:
+  - Low valuation multiples (P/E, P/B)
+  - Strong profitability (ROE, margins)
+  - Conservative balance sheet (low debt)
+  - Stable dividend payments
+  - Margin of safety in purchase price
+
+investment_philosophy: |
+  We seek companies trading below their intrinsic value, with strong competitive
+  positions, competent management, and sustainable business models. We prefer
+  established companies with proven track records over speculative growth stories.

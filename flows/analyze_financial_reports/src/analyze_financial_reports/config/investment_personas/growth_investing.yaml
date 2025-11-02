@@ -1,0 +1,37 @@
+name: "Growth Investing Strategy"
+strategy_type: "Growth"
+key_metrics:
+  - "Revenue Growth Rate"
+  - "EPS Growth Rate"
+  - "P/E Ratio"
+  - "PEG Ratio"
+  - "Operating Margin"
+  - "ROE"
+  - "Market Share Trends"
+
+criteria:
+  min_revenue_growth: 15
+  min_eps_growth: 20
+  max_pe: 35
+  max_peg: 2.0
+  min_operating_margin: 15
+  min_roe: 20
+
+risk_tolerance: "medium-high"
+time_horizon: "long-term"
+
+description: |
+  Growth investing strategy focused on companies with above-average growth potential.
+  Emphasizes:
+  - Strong revenue and earnings growth
+  - Expanding market opportunities
+  - Innovative products/services
+  - Growing market share
+  - Scalable business models
+  - Reasonable valuation relative to growth (PEG ratio)
+
+investment_philosophy: |
+  We seek companies with sustainable competitive advantages operating in large,
+  growing markets. We're willing to pay premium valuations for businesses with
+  exceptional growth prospects, strong management teams, and the ability to
+  compound earnings at above-average rates over time.

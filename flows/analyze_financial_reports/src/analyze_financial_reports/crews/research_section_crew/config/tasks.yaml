@@ -1,0 +1,70 @@
+gather_research:
+  description: >
+    Research the topic for the "{section_title}" section of the financial analysis report 
+    on {company_name}.
+    
+    Section Description:
+    {section_description}
+    
+    Use the following tools as specified for this section:
+    {required_tools}
+    
+    Your research should:
+    1. If 'financial_rag' is required: Extract relevant data from financial reports
+    2. If 'web_search' is required: Gather industry context and market information
+    3. Collect all necessary raw data that will be used for calculations and analysis
+    4. Take comprehensive notes on findings
+    
+    Investment Strategy Context:
+    {investment_persona}
+    
+    Focus on gathering information that will help assess whether {company_name} meets 
+    the criteria of this investment strategy.
+  expected_output: >
+    Comprehensive research notes including:
+    - Key data points extracted from financial reports
+    - Industry and market context
+    - Raw financial metrics that need to be analyzed
+    - Any qualitative insights discovered
+    All organized in a clear, structured format.
+  agent: financial_researcher
+
+analyze_and_visualize:
+  description: >
+    Analyze the research data gathered for "{section_title}" section on {company_name}.
+    
+    Section Description:
+    {section_description}
+    
+    Required tools for this section:
+    {required_tools}
+    
+    Your analysis should:
+    1. If 'ratio_calculator' is required: Calculate all relevant financial ratios
+    2. If 'visualization' is required: Create charts and graphs to visualize key metrics
+    3. Interpret the calculations and visualizations
+    4. Identify trends, strengths, weaknesses, and notable patterns
+    
+    Previous Research Notes:
+    (Available from the gather_research task)
+    
+    Investment Strategy Context:
+    {investment_persona}
+    
+    Ensure your analysis directly addresses how {company_name} performs against the 
+    criteria of the investment strategy.
+    
+    CRITICAL: You must return a valid FinancialData object with these exact fields:
+    - section_title (string): The title of the section
+    - metrics (string): JSON string of key metrics dictionary
+    - calculations (string): JSON string of calculated values
+    - visualizations (list): List of visualization file paths (can be empty list)
+    - research_notes (string): Your comprehensive research and analysis notes
+  expected_output: >
+    A FinancialData Pydantic model containing:
+    - section_title: "{section_title}"
+    - metrics: JSON string of key metrics found (e.g., '{"revenue": 1000000, "eps": 5.2}')
+    - calculations: JSON string of calculated ratios (e.g., '{"pe_ratio": 15.5, "roe": 18.2}')
+    - visualizations: List of paths to any charts created (e.g., ["charts/revenue_chart.png"])
+    - research_notes: Comprehensive notes combining research findings and analytical insights
+  agent: data_analyst

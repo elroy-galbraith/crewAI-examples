@@ -1,0 +1,38 @@
+name: "GARP (Growth at a Reasonable Price) Strategy"
+strategy_type: "GARP"
+key_metrics:
+  - "PEG Ratio"
+  - "Revenue Growth Rate"
+  - "EPS Growth Rate"
+  - "P/E Ratio"
+  - "ROE"
+  - "Operating Margin"
+  - "Free Cash Flow Growth"
+
+criteria:
+  max_peg: 1.5
+  min_revenue_growth: 10
+  min_eps_growth: 12
+  max_pe: 25
+  min_roe: 15
+  min_operating_margin: 12
+  min_fcf_growth: 8
+
+risk_tolerance: "medium"
+time_horizon: "medium-to-long-term"
+
+description: |
+  GARP strategy seeks the sweet spot between growth and value investing.
+  Emphasizes:
+  - Solid growth rates (but not excessive)
+  - Reasonable valuations (PEG ratio < 1.5)
+  - Quality fundamentals (high ROE, margins)
+  - Sustainable competitive advantages
+  - Balance between growth potential and valuation risk
+
+investment_philosophy: |
+  We believe the best returns come from growing companies purchased at
+  reasonable valuations. We avoid both value traps (cheap for a reason) and
+  overhyped growth stocks (too expensive). Our focus is on quality companies
+  with predictable growth, trading at fair prices that provide adequate
+  margin of safety while offering meaningful upside potential.
